@@ -1,29 +1,31 @@
 devices:
-    - name : Device Group 1
-      type : ACQ810.yml
+    - name : KAC E+E
+      type : KAC-E+E.yml
       conexion: R  # R = RTU 232/485 | T = TCP IPv4
-      id : 1     # this is the slave address number
-      baudrate : 9600   # Baud
+      id : 160     # this is the slave address number
+      baudrate : 19200   # Baud
       bytesize : 8
-      parity : 'N' # 'N' = none | 'E' = even | 'O' = odd | 'S' = space| 'M' = mark
+      parity : 'E' # 'N' = none | 'E' = even | 'O' = odd | 'S' = space| 'M' = mark
       stopbits : 1
       timeout  : 0.5   # seconds
       function : 3    # 3 = Read Holding register or 4 = Read Input register 
-    - name : Device Group 2
-      type : ACS310.yml
+    - name : KAC Sunlight Bosh
+      type : KAC-V3.yml
       conexion: R  # R = RTU 232/485 | T = TCP IPv4
-      id : 10     # this is the slave address number
-      baudrate : 9600   # Baud
+      id : 161     # this is the slave address number
+      baudrate : 19200   # Baud
       bytesize : 8
-      parity : 'N' # 'N' = none | 'E' = even | 'O' = odd | 'S' = space| 'M' = mark
+      parity : 'E' # 'N' = none | 'E' = even | 'O' = odd | 'S' = space| 'M' = mark
       stopbits : 1
       timeout  : 0.5   # seconds
       function : 3    # 3 = Read Holding register or 4 = Read Input register 
-    - name : Meter Group 3
-      type : VACON20.yml
-      conexion: T  # R = RTU 232/485 | T = TCP IPv4
-      id : 1     # this is the slave address number
-      direction : 192.168.0.123   # IPv4 destination address
-      port : 502  # destination port
-      timeout  : 5.0   # seconds
-      function : 4    # 3 = Read Holding register or 4 = Read Input register 
+    - name : KAC Sunrise ST
+      type : KAC-V3.yml
+      conexion: R  # R = RTU 232/485 | T = TCP IPv4
+      id : 162     # this is the slave address number
+      baudrate : 19200   # Baud
+      bytesize : 8
+      parity : 'E' # 'N' = none | 'E' = even | 'O' = odd | 'S' = space| 'M' = mark
+      stopbits : 1
+      timeout  : 0.5   # seconds
+      function : 3    # 3 = Read Holding register or 4 = Read Input register
